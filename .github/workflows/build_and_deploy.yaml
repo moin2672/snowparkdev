@@ -22,6 +22,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2.2.0
         with:
           activate-environment: snowpark_demo
+          working-directory: ./first_snowpark_project
           environment-file: environment.yml
 
       - name: Conda info
@@ -59,4 +60,4 @@ jobs:
           # SNOWFLAKE_CONNECTIONS_my_test_connection_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
           # SNOWFLAKE_CONNECTIONS_my_test_connection_DATABASE: "demo_db"
         # run: echo $SNOWFLAKE_CONNECTIONS_my_test_connection_ACCOUNT
-        run: python deploy_snowpark_app.py $GITHUB_WORKSPACE/first_snowpark_project
+        run: python deploy_snowpark_app.py $GITHUB_WORKSPACE
