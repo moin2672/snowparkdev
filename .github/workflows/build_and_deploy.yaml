@@ -60,30 +60,3 @@ jobs:
           # SNOWFLAKE_CONNECTIONS_my_test_connection_DATABASE: "demo_db"
         # run: echo $SNOWFLAKE_CONNECTIONS_my_test_connection_ACCOUNT
         run: python deploy_snowpark_app.py $GITHUB_WORKSPACE/first_snowpark_project
-
-      - name: cliaction
-        uses: Snowflake-Labs/snowflake-cli-action@v1
-        with:
-            cli-version: "latest"
-            default-config-file-path: "config.toml"
-        
-          # Use the CLI
-      # - name: Test version
-      #   run: |
-      #      snow --version
-      #      snow connection test
-
-      - name: deploy code
-        working-directory: first_snowpark_project
-        run: |
-            snow snowpark \
-                 deploy --replace \
-                  --temporary-connection \
-                  --account $SNOWFLAKE_ACCOUNT \
-                  --user pradeep \
-                  --database $SNOWFLAKE_DATABASE \
-                  --role $SNOWFLAKE_ROLE \
-                  --warehouse "COMPUTE_WH"
-      # - name: run snow
-      #   run: snow snowpark build
-           0
