@@ -1,0 +1,15 @@
+default_connection_name="trail"
+
+[cli.logs]
+save_logs = true
+path = "/home/codespace/.config/snowflake/logs"
+level = "info"
+
+[connections.trail]
+account="kqhyzct-dev_account"
+user="SYED_DEV" 
+password="tRiFRi3T+t7U&78#aW@*"
+warehouse="COMPUTE_WH"
+database="DEMO_DB"
+schema="PUBLIC"
+role="ACCOUNTADMIN"
