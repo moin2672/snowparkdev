@@ -1,11 +1,11 @@
-default_connection_name="trail"
+default_connection_name="default"
 
 [cli.logs]
 save_logs = true
 path = "/home/codespace/.config/snowflake/logs"
 level = "info"
 
-[connections.trail]
+[connections.default]
 account="kqhyzct-dev_account"
 user="SYED_DEV" 
 password="tRiFRi3T+t7U&78#aW@*"
